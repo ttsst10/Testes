@@ -7,82 +7,99 @@
 }
 
 :root {
-  --bg-main: #E4E4E4;
-  --bg-dark: #141414;
-  --bg-green: #11891C;
+  --bg-main: #0d131a;
+  --bg-white-border: #ffffff50;
+  --bg-white: #ffffff;
+  --bg-green: #248636;
 }
 
 body {
   /*font*/
   font-family: "Space Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-
-  /*Bg*/
   background-color: var(--bg-main);
 }
 
 main{
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /*bg*/
-  background: var(--bg-main);
+  margin-top: 80px;
 }
 
 header{
   /*size adjustments*/
   width: 100%;
-  height: auto;
+  padding: 10px;
+  font-size: 12px;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 
   /*colors*/
   background-color: var(--bg-dark);
-  color: var(--bg-main);
-
+  border-bottom: 0.1px solid var(--bg-white-border);
+  color: var(--bg-white);
 }
 
-.box-login{
-  /*Caixa-Login*/
+.login-conrainer{
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 20px;
-  width: 300px;
-
-  background-color: var(--bg-dark);
-  color: var(--bg-main);
-  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 50px)
 }
 
-.input-login,
-.input-password{
+.login-box{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--bg-white);
+}
+
+.login-txt {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.input-group{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  text-align: left;
 }
 
 input{
-  border: none;
+  border: 1px solid var(--bg-white-border);
   background-color: var(--bg-main);
-  height: 26px;
+  border-radius: 8px;
 
-  border-radius: 50px;
-  padding: 10px;
+  width: 500px;
+  height: 50px;
+  padding: 8px;
+  color: var(--bg-white);
 }
 
 .btn-login{
+  width: 500px;
+  height: 50px;
+  margin-top: 10px;
   border: none;
-  width: 100px;
-  height: auto;
-  padding: 6px;
-  border-radius: 5px;
-  align-self:center;
-
+  border-radius: 8px;
   background-color: var(--bg-green);
-  color: var(--bg-main);
-  font-weight: 700;
+  color: var(--bg-white);
+  cursor: pointer;
+}
+
+.btn-login:hover{
+  opacity: 0.9;
+  transition: 1s;
+}
+
+.forgot a{
+  font-weight: 800;
+  text-decoration: none;
+  color: #5b7fe4;
+}
+
+.forgot a:hover{
+  text-decoration: underline;
 }
