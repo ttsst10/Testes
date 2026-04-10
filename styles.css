@@ -91,7 +91,6 @@ input{
 
 .btn-login:hover{
   opacity: 0.9;
-  transition: 1s;
 }
 
 .forgot a{
